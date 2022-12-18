@@ -16,7 +16,7 @@ export default class RenderGlasses extends Component {
           cursor: "pointer",
           margin: "30px 20px",
         }}
-        onClick={() => this.getGlassesColor(this.props.element.url)}
+        onClick={() => this.props.getGlassesColor(this.props.element)}
       />
     );
   }

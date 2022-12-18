@@ -9,9 +9,9 @@ export default class Layout extends Component {
     imageUrl: "./images/v1.png",
   };
 
-  getGlassesColor = (imageUrl) => {
+  getGlassesColor = (glass) => {
     const newState = {
-      imageUrl: imageUrl,
+      imageUrl: glass.url,
     };
 
     this.setState(newState);
@@ -21,6 +21,7 @@ export default class Layout extends Component {
     return data.map((element) => {
       return (
         <RenderGlasses
+          key={element.id}
           element={element}
           getGlassesColor={this.getGlassesColor}
         />
